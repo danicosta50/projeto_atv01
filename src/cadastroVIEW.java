@@ -64,6 +64,7 @@ public class cadastroVIEW extends javax.swing.JFrame {
             }
         });
 
+        btnProdutos.setForeground(new java.awt.Color(102, 255, 0));
         btnProdutos.setText("Consultar Produtos");
         btnProdutos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
