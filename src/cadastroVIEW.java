@@ -57,6 +57,8 @@ public class cadastroVIEW extends javax.swing.JFrame {
             }
         });
 
+        cadastroValor.setBackground(new java.awt.Color(255, 255, 255));
+
         btnCadastrar.setBackground(new java.awt.Color(153, 255, 255));
         btnCadastrar.setText("Cadastrar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
