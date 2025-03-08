@@ -72,7 +72,10 @@ public class vendasVIEW extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+
         jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(255, 255, 102));
         jTextField1.setText("Lista de produtos vendidos");
 
         listaProdutos.setModel(new javax.swing.table.DefaultTableModel(
