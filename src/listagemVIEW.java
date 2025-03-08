@@ -206,8 +206,8 @@ public class listagemVIEW extends javax.swing.JFrame {
     private void listarProdutos() {
     ProdutosDAO produtosdao = new ProdutosDAO();
     String[] colunas = { "Id", "Nome", "Valor", "Status" };
-    DefaultTableModel model = new DefaultTableModel(colunas, 0);
-    model.setNumRows(0);
+    DefaultTableModel tabela = new DefaultTableModel(colunas, 0);
+    tabela.setNumRows(0);
     
     ArrayList<ProdutosDTO> listagem = produtosdao.listarProdutos();
 
@@ -220,13 +220,13 @@ public class listagemVIEW extends javax.swing.JFrame {
             produto.getNome(), 
             produto.getValor().toString(), 
             produto.getStatus() 
-        };
-        model.addRow(linha);
+        };   // montar lisgatem
+        tabela.addRow(linha);
     }
     
     // Ensure listaProdutos is not null
     if (listaProdutos != null) {
-        listaProdutos.setModel(model);
+        listaProdutos.setModel(tabela);
         listaProdutos.repaint();
     } else {
         JOptionPane.showMessageDialog(null, "Erro: listaProdutos está nulo.");
