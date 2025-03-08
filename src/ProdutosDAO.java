@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class ProdutosDAO {
-
+    // atividade 2
     Connection conn;
     PreparedStatement prep;
     ResultSet resultset;
@@ -38,7 +38,8 @@ public class ProdutosDAO {
     }
 
     public ArrayList<ProdutosDTO> listarProdutos() {
-        String sql = "SELECT * FROM produtos";
+        
+         String sql = "SELECT * FROM produtos";
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
