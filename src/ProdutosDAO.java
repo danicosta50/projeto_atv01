@@ -38,7 +38,7 @@ public class ProdutosDAO {
     }
 
     public ArrayList<ProdutosDTO> listarProdutos() {
-        
+        //cadastramento no banco de dados
          String sql = "SELECT * FROM produtos";
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
