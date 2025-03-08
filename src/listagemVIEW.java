@@ -40,7 +40,6 @@ public class listagemVIEW extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         btnVendas = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
-        btnVoltar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,13 +85,6 @@ public class listagemVIEW extends javax.swing.JFrame {
             }
         });
 
-        btnVoltar1.setText("Voltar");
-        btnVoltar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVoltar1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -109,8 +101,6 @@ public class listagemVIEW extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnVoltar1)
-                            .addGap(36, 36, 36)
                             .addComponent(btnVoltar)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(btnVendas, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -138,8 +128,7 @@ public class listagemVIEW extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVendas)
-                    .addComponent(btnVoltar)
-                    .addComponent(btnVoltar1))
+                    .addComponent(btnVoltar))
                 .addGap(17, 17, 17))
         );
 
@@ -163,10 +152,6 @@ public class listagemVIEW extends javax.swing.JFrame {
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
-
-    private void btnVoltar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnVoltar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,7 +192,6 @@ public class listagemVIEW extends javax.swing.JFrame {
     private javax.swing.JButton btnVendas;
     private javax.swing.JButton btnVender;
     private javax.swing.JButton btnVoltar;
-    private javax.swing.JButton btnVoltar1;
     private javax.swing.JTextPane id_produto_venda;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

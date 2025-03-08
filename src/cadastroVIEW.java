@@ -35,7 +35,6 @@ public class cadastroVIEW extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         btnCadastrar = new javax.swing.JButton();
         btnProdutos = new javax.swing.JButton();
-        btnProdutos1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,14 +49,11 @@ public class cadastroVIEW extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Valor:");
 
-        cadastroNome.setBackground(new java.awt.Color(255, 255, 255));
         cadastroNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastroNomeActionPerformed(evt);
             }
         });
-
-        cadastroValor.setBackground(new java.awt.Color(255, 255, 255));
 
         btnCadastrar.setBackground(new java.awt.Color(153, 255, 255));
         btnCadastrar.setText("Cadastrar");
@@ -67,19 +63,10 @@ public class cadastroVIEW extends javax.swing.JFrame {
             }
         });
 
-        btnProdutos.setForeground(new java.awt.Color(102, 255, 0));
         btnProdutos.setText("Consultar Produtos");
         btnProdutos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProdutosActionPerformed(evt);
-            }
-        });
-
-        btnProdutos1.setForeground(new java.awt.Color(255, 204, 0));
-        btnProdutos1.setText("Consultar Produtos");
-        btnProdutos1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProdutos1ActionPerformed(evt);
             }
         });
 
@@ -98,10 +85,7 @@ public class cadastroVIEW extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnProdutos1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(btnProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
@@ -143,9 +127,7 @@ public class cadastroVIEW extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnProdutos)
-                    .addComponent(btnProdutos1))
+                .addComponent(btnProdutos)
                 .addGap(22, 22, 22))
         );
 
@@ -175,10 +157,6 @@ public class cadastroVIEW extends javax.swing.JFrame {
         listagemVIEW listagem = new listagemVIEW(); 
         listagem.setVisible(true);
     }//GEN-LAST:event_btnProdutosActionPerformed
-
-    private void btnProdutos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdutos1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnProdutos1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,7 +196,6 @@ public class cadastroVIEW extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnProdutos;
-    private javax.swing.JButton btnProdutos1;
     private javax.swing.JTextField cadastroNome;
     private javax.swing.JTextField cadastroValor;
     private javax.swing.JLabel jLabel1;

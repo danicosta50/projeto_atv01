@@ -14,9 +14,9 @@ public class ProdutosDAO {
     ArrayList<ProdutosDTO> listagem = new ArrayList<>();
 
     private Connection getConnection() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/seu_banco_de_dados";
-        String user = "seu_usuario";
-        String password = "sua_senha";
+        String url = "jdbc:mysql://localhost:3306/Leilao";
+        String user = "root";
+        String password = "Nandocosta1#";
         return DriverManager.getConnection(url, user, password);
     }
 
