@@ -1,5 +1,7 @@
 
 import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -14,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
 public class listagemVIEW extends javax.swing.JFrame {
 
     /**
-     * Creates new form listagemVIEW
+     * teste
      */
     public listagemVIEW() {
         initComponents();
@@ -140,13 +142,14 @@ public class listagemVIEW extends javax.swing.JFrame {
         
         ProdutosDAO produtosdao = new ProdutosDAO();
         
-        //produtosdao.venderProduto(Integer.parseInt(id));
+        produtosdao.venderProduto(Integer.parseInt(id));
         listarProdutos();
     }//GEN-LAST:event_btnVenderActionPerformed
 
     private void btnVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVendasActionPerformed
-        //vendasVIEW vendas = new vendasVIEW(); 
-        //vendas.setVisible(true);
+       vendasVIEW vendas = new vendasVIEW(); 
+       //vendas.setVisible(true);
+       vendas.setVisible(true);
     }//GEN-LAST:event_btnVendasActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
@@ -201,25 +204,34 @@ public class listagemVIEW extends javax.swing.JFrame {
     private javax.swing.JTable listaProdutos;
     // End of variables declaration//GEN-END:variables
 
-    private void listarProdutos(){
-        try {
-            ProdutosDAO produtosdao = new ProdutosDAO();
-            
-            DefaultTableModel model = (DefaultTableModel) listaProdutos.getModel();
-            model.setNumRows(0);
-            
-            ArrayList<ProdutosDTO> listagem = produtosdao.listarProdutos();
-            
-            for(int i = 0; i < listagem.size(); i++){
-                model.addRow(new Object[]{
-                    listagem.get(i).getId(),
-                    listagem.get(i).getNome(),
-                    listagem.get(i).getValor(),
-                    listagem.get(i).getStatus()
-                });
-            }
-        } catch (Exception e) {
-        }
+    private void listarProdutos() {
+    ProdutosDAO produtosdao = new ProdutosDAO();
+    String[] colunas = { "Id", "Nome", "Valor", "Status" };
+    DefaultTableModel tabela = new DefaultTableModel(colunas, 0);
+    tabela.setNumRows(0);
     
+    ArrayList<ProdutosDTO> listagem = produtosdao.listarProdutos();
+
+    for (int i = 0; i < listagem.size(); i++) {
+        // Extraímos os dados
+        ProdutosDTO produto = listagem.get(i);
+
+        String[] linha = { 
+            produto.getId().toString(), 
+            produto.getNome(), 
+            produto.getValor().toString(), 
+            produto.getStatus() 
+        };   // montar lisgatem
+        tabela.addRow(linha);
     }
+    
+    // Ensure listaProdutos is not null
+    if (listaProdutos != null) {
+        listaProdutos.setModel(tabela);
+        listaProdutos.repaint();
+    } else {
+        JOptionPane.showMessageDialog(null, "Erro: listaProdutos está nulo.");
+    }
+}
+
 }

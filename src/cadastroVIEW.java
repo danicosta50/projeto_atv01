@@ -49,11 +49,14 @@ public class cadastroVIEW extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Valor:");
 
+        cadastroNome.setBackground(new java.awt.Color(255, 255, 255));
         cadastroNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastroNomeActionPerformed(evt);
             }
         });
+
+        cadastroValor.setBackground(new java.awt.Color(255, 255, 255));
 
         btnCadastrar.setBackground(new java.awt.Color(153, 255, 255));
         btnCadastrar.setText("Cadastrar");
