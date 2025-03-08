@@ -8,7 +8,7 @@
  * @author Adm
  */
 public class cadastroVIEW extends javax.swing.JFrame {
-
+  //ta complicado
     /**
      * Creates new form cadastroVIEW
      */
@@ -55,6 +55,8 @@ public class cadastroVIEW extends javax.swing.JFrame {
                 cadastroNomeActionPerformed(evt);
             }
         });
+
+        cadastroValor.setBackground(new java.awt.Color(0, 153, 0));
 
         btnCadastrar.setBackground(new java.awt.Color(153, 255, 255));
         btnCadastrar.setText("Cadastrar");
